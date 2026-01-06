@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -47,7 +48,7 @@
             groupBoxButtons_GVM = new GroupBox();
             buttonOpenFile_GVM = new Button();
             buttonSave_GVM = new Button();
-            buttonViewBase_GVM = new Button();
+            buttonGuide_GVM = new Button();
             buttonInfo_GVM = new Button();
             openFileDialogMain_GVM = new OpenFileDialog();
             toolTipInfo_GVM = new ToolTip(components);
@@ -135,8 +136,7 @@
             dataGridViewBase_GVM.Name = "dataGridViewBase_GVM";
             dataGridViewBase_GVM.RowHeadersVisible = false;
             dataGridViewBase_GVM.RowHeadersWidth = 51;
-            dataGridViewBase_GVM.ScrollBars = ScrollBars.Horizontal;
-            dataGridViewBase_GVM.Size = new Size(987, 499);
+            dataGridViewBase_GVM.Size = new Size(1353, 499);
             dataGridViewBase_GVM.TabIndex = 3;
             dataGridViewBase_GVM.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -210,7 +210,7 @@
             // 
             groupBoxButtons_GVM.Controls.Add(buttonOpenFile_GVM);
             groupBoxButtons_GVM.Controls.Add(buttonSave_GVM);
-            groupBoxButtons_GVM.Controls.Add(buttonViewBase_GVM);
+            groupBoxButtons_GVM.Controls.Add(buttonGuide_GVM);
             groupBoxButtons_GVM.Controls.Add(buttonInfo_GVM);
             groupBoxButtons_GVM.Location = new Point(0, 657);
             groupBoxButtons_GVM.Name = "groupBoxButtons_GVM";
@@ -243,19 +243,18 @@
             buttonSave_GVM.UseVisualStyleBackColor = true;
             buttonSave_GVM.Click += buttonSave_GVM_Click;
             // 
-            // buttonViewBase_GVM
+            // buttonGuide_GVM
             // 
-            buttonViewBase_GVM.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            buttonViewBase_GVM.BackgroundImage = Properties.Resources.database_table;
-            buttonViewBase_GVM.BackgroundImageLayout = ImageLayout.Zoom;
-            buttonViewBase_GVM.Enabled = false;
-            buttonViewBase_GVM.Location = new Point(223, 9);
-            buttonViewBase_GVM.Name = "buttonViewBase_GVM";
-            buttonViewBase_GVM.Size = new Size(75, 56);
-            buttonViewBase_GVM.TabIndex = 1;
-            toolTipInfo_GVM.SetToolTip(buttonViewBase_GVM, "Вывести базу данных");
-            buttonViewBase_GVM.UseVisualStyleBackColor = true;
-            buttonViewBase_GVM.Click += buttonViewBase_GVM_Click;
+            buttonGuide_GVM.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonGuide_GVM.BackgroundImage = (Image)resources.GetObject("buttonGuide_GVM.BackgroundImage");
+            buttonGuide_GVM.BackgroundImageLayout = ImageLayout.Zoom;
+            buttonGuide_GVM.Location = new Point(929, 10);
+            buttonGuide_GVM.Name = "buttonGuide_GVM";
+            buttonGuide_GVM.Size = new Size(75, 56);
+            buttonGuide_GVM.TabIndex = 1;
+            toolTipInfo_GVM.SetToolTip(buttonGuide_GVM, "Краткое руководство пользователя\r\n");
+            buttonGuide_GVM.UseVisualStyleBackColor = true;
+            buttonGuide_GVM.Click += buttonViewBase_GVM_Click;
             // 
             // buttonInfo_GVM
             // 
@@ -324,7 +323,7 @@
             tabControlMain_GVM.Controls.Add(tabPage1);
             tabControlMain_GVM.Controls.Add(tabPage2);
             tabControlMain_GVM.Controls.Add(tabPage3);
-            tabControlMain_GVM.Location = new Point(1154, 0);
+            tabControlMain_GVM.Location = new Point(1378, 12);
             tabControlMain_GVM.Name = "tabControlMain_GVM";
             tabControlMain_GVM.SelectedIndex = 0;
             tabControlMain_GVM.Size = new Size(328, 645);
@@ -763,7 +762,6 @@
             // 
             // numericUpDownPolVal_GVM
             // 
-            numericUpDownPolVal_GVM.Enabled = false;
             numericUpDownPolVal_GVM.Location = new Point(155, 265);
             numericUpDownPolVal_GVM.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDownPolVal_GVM.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
@@ -777,11 +775,9 @@
             numericUpDownChild_GVM.Enabled = false;
             numericUpDownChild_GVM.Location = new Point(155, 302);
             numericUpDownChild_GVM.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            numericUpDownChild_GVM.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownChild_GVM.Name = "numericUpDownChild_GVM";
             numericUpDownChild_GVM.Size = new Size(120, 27);
             numericUpDownChild_GVM.TabIndex = 33;
-            numericUpDownChild_GVM.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // numericUpDownFamily_GVM
             // 
@@ -836,7 +832,7 @@
             chartFunc_GVM.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             chartFunc_GVM.Legends.Add(legend1);
-            chartFunc_GVM.Location = new Point(1143, 734);
+            chartFunc_GVM.Location = new Point(1284, 794);
             chartFunc_GVM.Name = "chartFunc_GVM";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -850,7 +846,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1591, 995);
+            ClientSize = new Size(1732, 1055);
             Controls.Add(chartFunc_GVM);
             Controls.Add(tabControlMain_GVM);
             Controls.Add(groupBoxButtons_GVM);
@@ -902,7 +898,7 @@
         private TabPage tabPage1;
         private TabPage tabPage2;
         private TabPage tabPage3;
-        private Button buttonViewBase_GVM;
+        private Button buttonGuide_GVM;
         private Button buttonInfo_GVM;
         private Button buttonSave_GVM;
         private Button buttonOpenFile_GVM;

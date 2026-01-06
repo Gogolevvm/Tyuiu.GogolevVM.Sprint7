@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.Text;
 using System.Windows.Forms.DataVisualization.Charting;
 using Tyuiu.GogolevVM.Sprint7.Project.V7.Lib;
 namespace Tyuiu.GogolevVM.Sprint7.Project.V7
@@ -12,7 +13,7 @@ namespace Tyuiu.GogolevVM.Sprint7.Project.V7
         DataService ds = new DataService();
         static int rows;
         static int columns;
-        string filepath;
+        static string filepath;
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -36,6 +37,7 @@ namespace Tyuiu.GogolevVM.Sprint7.Project.V7
         public static string[,] LoadFromFileData(string filePath)
         {
             string FileData = File.ReadAllText(filePath);
+            FileData = FileData.Replace('\n', '\r');
 
             string[] lines = FileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -49,7 +51,7 @@ namespace Tyuiu.GogolevVM.Sprint7.Project.V7
                 string[] line_r = lines[r].Split(';');
                 for (int c = 0; c < columns; c++)
                 {
-                    arrayValues[r, c] = line_r[c];
+                    arrayValues[r, c] = Convert.ToString(line_r[c]);
                 }
             }
             return arrayValues;
@@ -64,11 +66,67 @@ namespace Tyuiu.GogolevVM.Sprint7.Project.V7
 
                 string[,] arrayValues = new string[rows, columns];
 
+                
+
                 arrayValues = LoadFromFileData(filepath);
+                dataGridViewBase_GVM.ColumnCount = columns;
+                dataGridViewBase_GVM.RowCount = rows;
+                
+                
+                for (int i = 0; i < columns; i++)
+                {
+                    dataGridViewBase_GVM.Columns[i].Width = 120;
+                    dataGridViewBase_GVM.Columns[i].Width = 120;
+                }
 
-                arrayValues = ds.getFile(filepath);
+                for (int r = 0;r < rows;r++)
+                {
+                    for (int c = 0;c < columns;c++)
+                    {
+                        dataGridViewBase_GVM.Rows[r].Cells[c].Value = arrayValues[r,c];
+                    }
+                }
 
-                buttonViewBase_GVM.Enabled = true;
+
+                buttonFiltCwi_GVM.Enabled = true;
+                buttonSearch_GVM.Enabled = true;
+                buttonDelete_GVM.Enabled = true;
+                buttonSave_GVM.Enabled = true;
+                buttonAdd_GVM.Enabled = true;
+                buttonMin_GVM.Enabled = true;
+                buttonMax_GVM.Enabled = true;
+                buttonAverage_GVM.Enabled = true;
+                buttonFlitCancel_GVM.Enabled = true;
+                buttonFiltMoney_GVVM.Enabled = true;
+                textBoxSearch_GVM.Enabled = true;
+                textBoxMax_GVM.Enabled = true;
+                textBoxMin_GVM.Enabled = true;
+                textBoxAverage_GVM.Enabled = true;
+                comboBoxFiltMoney_GVM.Enabled = true;
+                buttonNum_GVM.Enabled = true;
+                buttonGraph_GVM.Enabled = true;
+                listBoxSort_GVM.Enabled = true;
+                buttonVoz_GVM.Enabled = true;
+                buttonUb_GVM.Enabled = true;
+                numericUpDownFilCw_GVM.Enabled = true;
+                numericUpDownPad_GVM.Enabled = true;
+                numericUpDownPods_GVM.Enabled = true;
+                textBoxFamilia_GVM.Enabled = true;
+                dateTimePickerDate_GVM.Enabled = true;
+                numericUpDownCw_GVM.Enabled = true;
+                numericUpDownK_GVM.Enabled = true;
+                numericUpDownVal_GVM.Enabled = true;
+                numericUpDownChild_GVM.Enabled = true;
+                comboBoxMoney_GVM.Enabled = true;
+                numericUpDownFamily_GVM.Enabled = true;
+                textBoxPrim_GVM.Enabled = true;
+                buttonDelete_GVM.Enabled = true;
+                buttonRed_GVM.Enabled = true;
+                buttonAdd_GVM.Enabled = true;
+
+
+
+                
 
             }
             catch
@@ -111,7 +169,7 @@ namespace Tyuiu.GogolevVM.Sprint7.Project.V7
                         str = str + dataGridViewBase_GVM.Rows[i].Cells[j].Value;
                     }
                 }
-                File.AppendAllText(path, str + Environment.NewLine);
+                File.AppendAllText(path, str + Environment.NewLine, Encoding.UTF8);
                 str = "";
             }
         }
@@ -147,59 +205,9 @@ namespace Tyuiu.GogolevVM.Sprint7.Project.V7
 
         private void buttonViewBase_GVM_Click(object sender, EventArgs e)
         {
-            dataGridViewBase_GVM.ColumnCount = columns;
-            dataGridViewBase_GVM.RowCount = rows;
+          FormGuide formGuide = new FormGuide();
+          formGuide.ShowDialog();
 
-            dataGridViewBase_GVM.Rows[0].ReadOnly = true;
-            dataGridViewBase_GVM.Columns[0].ReadOnly = true;
-
-            string[,] arrayValues = new string[rows, columns];
-            arrayValues = LoadFromFileData(filepath);
-
-            for (int r = 0; r < rows; r++)
-            {
-                for (int c = 0; c < columns; c++)
-                {
-                    dataGridViewBase_GVM.Rows[r].Cells[c].Value = arrayValues[r, c];
-                }
-            }
-            arrayValues = ds.getFile(filepath);
-
-            buttonFiltCwi_GVM.Enabled = true;
-            buttonSearch_GVM.Enabled = true;
-            buttonDelete_GVM.Enabled = true;
-            buttonSave_GVM.Enabled = true;
-            buttonAdd_GVM.Enabled = true;
-            buttonMin_GVM.Enabled = true;
-            buttonMax_GVM.Enabled = true;
-            buttonAverage_GVM.Enabled = true;
-            buttonFlitCancel_GVM.Enabled = true;
-            buttonFiltMoney_GVVM.Enabled = true;
-            textBoxSearch_GVM.Enabled = true;
-            textBoxMax_GVM.Enabled = true;
-            textBoxMin_GVM.Enabled = true;
-            textBoxAverage_GVM.Enabled = true;
-            comboBoxFiltMoney_GVM.Enabled = true;
-            buttonNum_GVM.Enabled = true;
-            buttonGraph_GVM.Enabled = true;
-            listBoxSort_GVM.Enabled = true;
-            buttonVoz_GVM.Enabled = true;
-            buttonUb_GVM.Enabled = true;
-            numericUpDownFilCw_GVM.Enabled = true;
-            numericUpDownPad_GVM.Enabled = true;
-            numericUpDownPods_GVM.Enabled = true;
-            textBoxFamilia_GVM.Enabled = true;
-            dateTimePickerDate_GVM.Enabled = true;
-            numericUpDownCw_GVM.Enabled = true;
-            numericUpDownK_GVM.Enabled = true;
-            numericUpDownVal_GVM.Enabled = true;
-            numericUpDownChild_GVM.Enabled = true;
-            comboBoxMoney_GVM.Enabled = true;
-            numericUpDownFamily_GVM.Enabled = true;
-            textBoxPrim_GVM.Enabled = true;
-            buttonDelete_GVM.Enabled = true;
-            buttonRed_GVM.Enabled = true;
-            buttonAdd_GVM.Enabled = true;
 
         }
 
@@ -342,7 +350,7 @@ namespace Tyuiu.GogolevVM.Sprint7.Project.V7
 
         private void buttonFlitCancel_GVM_Click(object sender, EventArgs e)
         {
-            foreach (DataGridView row in dataGridViewBase_GVM.Rows)
+            foreach (DataGridViewRow row in dataGridViewBase_GVM.Rows)
             {
                 row.Visible = true;
             }

@@ -36,33 +36,26 @@
             // 
             // textBoxInfo_GVM
             // 
-            textBoxInfo_GVM.Location = new Point(279, 12);
-            textBoxInfo_GVM.Multiline = true;
+            resources.ApplyResources(textBoxInfo_GVM, "textBoxInfo_GVM");
             textBoxInfo_GVM.Name = "textBoxInfo_GVM";
             textBoxInfo_GVM.ReadOnly = true;
-            textBoxInfo_GVM.Size = new Size(509, 141);
-            textBoxInfo_GVM.TabIndex = 0;
-            textBoxInfo_GVM.Text = resources.GetString("textBoxInfo_GVM.Text");
             // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = Properties.Resources.Рисунок1;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(12, 12);
+            resources.ApplyResources(pictureBox1, "pictureBox1");
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(228, 426);
-            pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
             // FormInfo
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
             Controls.Add(pictureBox1);
             Controls.Add(textBoxInfo_GVM);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormInfo";
-            Text = "О программе";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

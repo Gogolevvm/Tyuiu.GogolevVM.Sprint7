@@ -117,78 +117,62 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Kvartira.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="familia.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Date.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColumnKvartira_GVM.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Komnats.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Ploshad_GVM.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="polva1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColumnDeti_GVM.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColumnDolg_GVM.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColumnFamily_GVM.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column_prim_GVM.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="toolTipInfo_GVM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>250, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonGuide_GVM.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
+  <data name="textBoxGuide_GVM.Text" xml:space="preserve">
+    <value>Описание программы
+Программа для управления данными жильцов многоквартирного дома (столбцы: Номер подъезда, ФИО, Дата прописки, Номер квартиры, Количество комнат, Общая площадь, Полезная площадь, Количество детей, Задолженность  Количество членов семьи, Примечания).
+
+Основные функции
+Расчет минимальной, максимальной и средней площади квартир
+
+Построение графика зависимости площади от количества комнат
+
+Импорт/экспорт CSV данных
+
+Поиск и фильтрация по таблице
+
+Сортировка по различным критериям
+
+Добавление, редактирование и удаление записей
+
+
+
+Основной функционал
+Импорт CSV: Загрузка данных жильцов из CSV-файла в таблицу
+
+Экспорт CSV: Сохранение табличных данных в CSV-файл
+
+Статистика: Вычисление минимальной, максимальной и средней площади квартир
+
+Визуализация: Построение графика зависимости площади от количества комнат
+
+Поиск: Поиск записей по любому полю таблицы
+
+Сортировка: Сортировка данных по 8 различным критериям в двух направлениях
+
+Фильтрация: Фильтрация записей по подъезду, количеству комнат, наличию льгот
+
+Управление записями: Полный CRUD функционал (создание, чтение, обновление, удаление)
+
+Требования к данным
+Формат файла: CSV с разделителем ";" (точка с запятой)
+
+Кодировка: UTF-8 или Windows-1251
+
+Структура: 11 колонок с фиксированными типами данных
+
+Обязательные поля при добавлении: Фамилия, Льготы, Примечания
+
+Дополнительные функции
+Редактирование на месте: Изменение данных выбранной записи
+
+Многоуровневая фильтрация: Комбинирование фильтров по разным критериям
+
+Сброс фильтров: Единая кнопка для отмены всех фильтров
+
+Валидация данных: Проверка обязательных полей при добавлении/редактировании
+
+Назначение программы
+Программа предназначена для сотрудников жилищно-коммунальных служб и управляющих компаний для эффективного учета и анализа данных о жильцах многоквартирных домов, планирования ресурсов, контроля льгот и оптимизации жилищного фонда.
 </value>
   </data>
-  <metadata name="openFileDialogMain_GVM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="saveFileDialog_GVM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>422, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>84</value>
-  </metadata>
 </root>
